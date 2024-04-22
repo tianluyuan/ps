@@ -1,4 +1,4 @@
-Running `python3 mwe.py` should produce the following plots
+Running `mkdir -p output && python3 mwe.py` should produce the following plots and the splined data file `output/out.fits`.
 
 Input data             |  Fitted spline
 :-------------------------:|:-------------------------:

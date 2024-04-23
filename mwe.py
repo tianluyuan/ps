@@ -52,7 +52,7 @@ def plot_values():
     plt.grid(None)
     plt.xlabel('cth')
     plt.ylabel('phi')
-    plt.savefig('output/vlu.png')
+    plt.savefig('vlu.png')
 
 
 def plot_spline(a):
@@ -75,7 +75,7 @@ def plot_spline(a):
     plt.ylabel('phi')
     plt.xlim(-1, 1)
     plt.ylim(0, 180)
-    plt.savefig('output/spl.png')
+    plt.savefig('spl.png')
 
 
 _data, w = ndsparse.from_data(VLU, 1000*np.ones(VLU.shape))
@@ -86,7 +86,7 @@ spline = glam_fit(_data,
                   [2, 2], # second order polynominals
                   [0.01, 0.01], # penalty, increasing can help prevent overfitting
                   penaltyOrder=[2, 2]) # 2nd order regularization (curvature)
-spline.write('output/out.fits')
+spline.write('out.fits')
 
 plot_values()
 plot_spline(spline)
